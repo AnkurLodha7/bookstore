@@ -1,0 +1,32 @@
+
+<title>BookStore App</title>
+<label for="search">Search:</label>
+<div id="custom-search-input">
+    <div class="input-group col-md-12">
+<input type="text" id="search" class="search-query form-control"  placeholder="Search by Title,Author,Genre" ng-model="searchBook">
+</div>
+    </div>
+
+        <div class="panel panel default">
+    <div class="panel-heading">
+        <h1 class="panel-title"><b>Latest Books</b></h1>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div ng-repeat="book in booksInfo.books | filter: search">
+                <div class="col-md-12">
+                    <div class="col-md-3">
+                        <img class="thumbnail" ng-src="{{book.img_url}}">
+                    </div>
+                    <div class="col-md-6">
+                       <h4><b>{{book.title}}</b></h4>
+                        <p>{{book.description}}</p>
+                        <a class="btn btn-info"  href="#/books/details/{{book._id}}">View Details</a>
+                        <a class="btn btn-info" href="{{book.buy_url}}">Buy {{book.title}} </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

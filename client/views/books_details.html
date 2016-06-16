@@ -1,0 +1,28 @@
+
+<title>{{bookDetailsInfo.book.title}}</title>
+<span class="panel panel default">
+    <div class="panel-heading">
+        <div class="panel-title"><b>{{bookDetailsInfo.book.title | uppercase}}</b></div>
+    </div>
+    <div class="panel-body">
+        <span class="row">
+                <div class="col-md-4">
+                    <img class="thumbnail"  ng-src="{{bookDetailsInfo.book.img_url}}">
+                </div>
+                   <div class="col-md-8">
+                       <p class="bg-primary"></p>
+                       </p><h3><b>{{bookDetailsInfo.book.title |uppercase}}</b></h3></p>
+                       </p><h6><b>Author:{{bookDetailsInfo.book.author | uppercase}}</b></h6></p>
+                       </p><h6><b>Genre:{{bookDetailsInfo.book.genre | uppercase}}</b></h6></p>
+                       </p><b>Pages:{{bookDetailsInfo.book.pages}}</b></p>
+
+                        <p>{{bookDetailsInfo.book.description}}</p>
+                        <a class="btn btn-info" target="_blank" href="{{bookDetailsInfo.book.buy_url}}">Buy{{bookDetailsInfo.book.title}}</a>
+                       <a class="btn btn-primary" target="_blank" href="#/books/edit/{{bookDetailsInfo.book._id}}">Edit {{bookDetailsInfo.book.title}}</a>
+                        <a class="btn btn-danger" ng-click="remove(bookDetailsInfo.book._id)">Delete {{bookDetailsInfo.book.title}}</a>
+                       <a class="btn btn-warning" href="#/books">Back To Home Page</a>
+                   </div>
+
+        </span>
+    </div>
+</span>

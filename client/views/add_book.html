@@ -1,0 +1,56 @@
+<title>Add Book</title>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading-heading">
+        <div class="panel-title">ADD BOOK</div>
+    </div>
+    <div class="panel panel-body">
+        <div class="row">
+            <div class="col-md-12">
+            <form ng-submit="addBook()">
+                <fieldset >
+                    <div class="form-group">
+                        <label for="title">Add Book's Title:</label>
+                        <input type="text" id="title" class="form-control" placeholder="Add Title" ng-model="book.title">
+                    </div>
+                    <div class="form-group">
+                        <label for="author">Add Book's Author:</label>
+                        <input type="text" id="author" class="form-control" placeholder="Add Author" ng-model="book.author">
+                    </div>
+                    <div class="form-group">
+                        <label for="genre">Add Book's Genre</label>
+                        <select id="genre" class="form-control" ng-model="book.genre">
+                            <option value="roamnce">Romance</option>
+                            <option value="thriller">Thriller</option>
+                            <option value="fiction">Fiction</option>
+                            <option value="biography">Biography</option>
+
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="pages">Add Book's Total Pages:</label>
+                        <input type="text" id="pages" class="form-control" placeholder="Add Pages" ng-model="book.pages">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Add Book's Description:</label>
+                        <textarea type="text" id="description" class="form-control" placeholder="Add Title" ng-model="book.description"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="image">Add Book's Image Url:</label>
+                        <input type="text" id="image" class="form-control" placeholder="Add Book Image Url" ng-model="book.img_url">
+                    </div>
+                    <div class="form-group">
+                        <label for="buy">Add Book's Buy Url:</label>
+                        <input type="text" id="buy" class="form-control" placeholder="Add " ng-model="book.buy_url">
+                    </div>
+                    <button type="submit" class="btn btn-primary" >Submit</button>
+                </fieldset>
+            </form>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
